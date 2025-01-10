@@ -25,7 +25,7 @@ app.get('/add', (req, res) => {
     }
 
     const sanitizedProduct = sanitizeInput(product)
-    const command = `PRODUCT="${sanitizedProduct}" cypress run --e2e /e2e/cypress/bonpreu.cy.js`
+    const command = `PRODUCT="${sanitizedProduct}" cypress run --e2e /app/cypress/bonpreu.cy.js`
 
     console.log(`Adding '${sanitizedProduct}' to the BonPreu cart...`)
 

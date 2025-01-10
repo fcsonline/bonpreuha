@@ -6,7 +6,7 @@ module.exports = defineConfig({
     specPattern: 'cypress/**.cy.js',
     supportFile: false,
   },
-  video: false,
+  video: process.env.CYPRESS_VIDEO ? Boolean(process.env.CYPRESS_VIDEO): false,
   screenshotOnRunFailure: false,
   env: {
     USERNAME: process.env.USERNAME,
