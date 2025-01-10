@@ -48,12 +48,16 @@ describe("Add product Bonpreu Online Store", () => {
     });
 
     cy.visit("/"); // Navigate
+
+    cy.wait(5000); // Wait to load
+
     cy.get('form[role="search"]').within(() => {
-      cy.wait(2000);
       cy.get('input[name="q"]').type(product); // Search product
       cy.wait(3000);
       cy.get('button[type="submit"]').click();
     });
+
+    cy.wait(5000); // Wait to load
 
     cy.contains("Afegeix").first().scrollIntoView().click(); // Add product
   });
