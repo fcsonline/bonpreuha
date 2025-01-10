@@ -15,4 +15,4 @@ COPY cypress ./cypress
 COPY server.js .
 EXPOSE 3000/tcp
 
-ENTRYPOINT ["npx", "run", "server.js"]
+ENTRYPOINT ["npm", "run", "start"]
